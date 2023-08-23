@@ -17,6 +17,7 @@ int e_primo(int num) {
 int main() {
   int num;
 
+  printf("Digite um inteiro: ");
   scanf("%d", &num);
 
   if (e_primo(num)) {

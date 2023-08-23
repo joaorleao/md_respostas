@@ -16,7 +16,9 @@ int alg_euclides_lim(int a, int b, int qtd) {
 int main() {
   int num1, num2, a, b, q, s, t, qtd, aux, i;
 
+  printf("Digite dois números inteiros: ");
   scanf("%d%d", &num1, &num2);
+
   a = num1;
   b = num2;
 

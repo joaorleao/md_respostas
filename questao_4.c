@@ -3,7 +3,9 @@
 int main() {
   int num1, num2, mdc, mmc, primo, divide1, divide2;
 
+  printf("Digite dois números inteiros: ");
   scanf("%d%d", &num1, &num2);
+
   mdc = 1;
   mmc = 1;
   primo = 2;

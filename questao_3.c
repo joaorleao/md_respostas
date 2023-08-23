@@ -3,7 +3,9 @@
 int main() {
   int num, primo, qtd;
 
+  printf("Digite um inteiro: ");
   scanf("%d", &num);
+
   primo = 2;
   qtd = 0;
 
