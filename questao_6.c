@@ -1,28 +1,15 @@
 #include <stdio.h>
 
-int alg_euclides_lim(int a, int b, int qtd) {
-  int aux, q;
-  q = a / b;
-  while (qtd > 0) {
-    aux = b;
-    b = a % b;
-    a = aux;
-    q = a / b;
-    qtd -= 1;
-  }
-  return q;
-}
-
 int main() {
-  int num1, num2, a, b, q, s, t, qtd, aux, i;
+  int num1, num2, a, b, s, t, qtd, aux, i;
 
   printf("Digite dois números inteiros: ");
   scanf("%d%d", &num1, &num2);
 
   a = num1;
   b = num2;
-
   qtd = 0;
+
   while (b != 0) {
     aux = b;
     b = a % b;
@@ -30,12 +17,23 @@ int main() {
     qtd += 1;
   }
 
+  a = num1;
+  b = num2;
+  i = 0;
+  int q[qtd];
+
+  while (b != 0) {
+    q[i++] = a / b;
+    aux = b;
+    b = a % b;
+    a = aux;
+  }
+
   s = 0;
   t = 1;
   for (i = 0; i < qtd - 1; i++) {
-    q = alg_euclides_lim(num1, num2, qtd - i - 2);
     aux = t;
-    t = s + t * q;
+    t = s + t * q[qtd - i - 2];
     s = aux;
   }
 
